@@ -16,6 +16,9 @@ class TripsViewController: UIViewController {
         title = "Trips"
         
         tableView.dataSource = self
+        tableView.delegate = self
+        
+        view.backgroundColor = Theme.backgroundColor
         
         TripFunctions.readTrips { [weak self] in
             self?.tableView.reloadData()
@@ -30,12 +33,16 @@ extension TripsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        
-        if (cell == nil) {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        }
-        cell!.textLabel?.text = Data.tripModels[indexPath.row].title
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TripsTableViewCell") as! TripsTableViewCell
+        let tripModel = Data.tripModels[indexPath.row]
+        cell.setup(tripModel: tripModel)
+       
+        return cell
+    }
+}
+
+extension TripsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
     }
 }
