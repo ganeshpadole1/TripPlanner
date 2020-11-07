@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		1F73DAF025568CFD001CC1CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73DAEF25568CFD001CC1CD /* AppDelegate.swift */; };
 		1F73DAF225568CFD001CC1CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73DAF125568CFD001CC1CD /* SceneDelegate.swift */; };
-		1F73DAF425568CFD001CC1CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73DAF325568CFD001CC1CD /* ViewController.swift */; };
-		1F73DAF725568CFD001CC1CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F73DAF525568CFD001CC1CD /* Main.storyboard */; };
 		1F73DAFA25568CFD001CC1CD /* TripPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F73DAF825568CFD001CC1CD /* TripPlanner.xcdatamodeld */; };
 		1F73DAFC25568CFF001CC1CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F73DAFB25568CFF001CC1CD /* Assets.xcassets */; };
 		1F73DAFF25568CFF001CC1CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F73DAFD25568CFF001CC1CD /* LaunchScreen.storyboard */; };
 		1F73DB0A25568D00001CC1CD /* TripPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73DB0925568D00001CC1CD /* TripPlannerTests.swift */; };
 		1F73DB1525568D00001CC1CD /* TripPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73DB1425568D00001CC1CD /* TripPlannerUITests.swift */; };
+		1FF899562556E4FF00F9718E /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF899552556E4FF00F9718E /* TripModel.swift */; };
+		1FF8995B2556E50C00F9718E /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8995A2556E50C00F9718E /* TripFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		1F73DAEC25568CFD001CC1CD /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F73DAEF25568CFD001CC1CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F73DAF125568CFD001CC1CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F73DAF325568CFD001CC1CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1F73DAF625568CFD001CC1CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F73DAF925568CFD001CC1CD /* TripPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripPlanner.xcdatamodel; sourceTree = "<group>"; };
 		1F73DAFB25568CFF001CC1CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F73DAFE25568CFF001CC1CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +49,8 @@
 		1F73DB1025568D00001CC1CD /* TripPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F73DB1425568D00001CC1CD /* TripPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlannerUITests.swift; sourceTree = "<group>"; };
 		1F73DB1625568D00001CC1CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FF899552556E4FF00F9718E /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		1FF8995A2556E50C00F9718E /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +101,9 @@
 		1F73DAEE25568CFD001CC1CD /* TripPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				1FF899532556E4DA00F9718E /* Model */,
 				1F73DAEF25568CFD001CC1CD /* AppDelegate.swift */,
 				1F73DAF125568CFD001CC1CD /* SceneDelegate.swift */,
-				1F73DAF325568CFD001CC1CD /* ViewController.swift */,
-				1F73DAF525568CFD001CC1CD /* Main.storyboard */,
 				1F73DAFB25568CFF001CC1CD /* Assets.xcassets */,
 				1F73DAFD25568CFF001CC1CD /* LaunchScreen.storyboard */,
 				1F73DB0025568CFF001CC1CD /* Info.plist */,
@@ -129,6 +128,23 @@
 				1F73DB1625568D00001CC1CD /* Info.plist */,
 			);
 			path = TripPlannerUITests;
+			sourceTree = "<group>";
+		};
+		1FF899532556E4DA00F9718E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FF899542556E4E100F9718E /* Trip */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1FF899542556E4E100F9718E /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				1FF899552556E4FF00F9718E /* TripModel.swift */,
+				1FF8995A2556E50C00F9718E /* TripFunctions.swift */,
+			);
+			path = Trip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +252,6 @@
 			files = (
 				1F73DAFF25568CFF001CC1CD /* LaunchScreen.storyboard in Resources */,
 				1F73DAFC25568CFF001CC1CD /* Assets.xcassets in Resources */,
-				1F73DAF725568CFD001CC1CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F73DAF425568CFD001CC1CD /* ViewController.swift in Sources */,
 				1F73DAF025568CFD001CC1CD /* AppDelegate.swift in Sources */,
+				1FF8995B2556E50C00F9718E /* TripFunctions.swift in Sources */,
 				1F73DAF225568CFD001CC1CD /* SceneDelegate.swift in Sources */,
+				1FF899562556E4FF00F9718E /* TripModel.swift in Sources */,
 				1F73DAFA25568CFD001CC1CD /* TripPlanner.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,14 +316,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1F73DAF525568CFD001CC1CD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1F73DAF625568CFD001CC1CD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1F73DAFD25568CFF001CC1CD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
