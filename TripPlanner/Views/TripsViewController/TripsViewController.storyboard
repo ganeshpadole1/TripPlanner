@@ -62,11 +62,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vX-n8-lOK">
+                                <rect key="frame" x="338" y="786" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="C09-mU-TvX"/>
+                                    <constraint firstAttribute="width" constant="56" id="cV0-fs-zwn"/>
+                                </constraints>
+                                <state key="normal" image="addButton"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5wP-Jc-CkD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="EEF-du-q7L" firstAttribute="top" secondItem="5wP-Jc-CkD" secondAttribute="top" id="LYc-u2-3xm"/>
+                            <constraint firstItem="5wP-Jc-CkD" firstAttribute="bottom" secondItem="4vX-n8-lOK" secondAttribute="bottom" constant="20" id="Rcs-Ls-bAe"/>
+                            <constraint firstItem="5wP-Jc-CkD" firstAttribute="trailing" secondItem="4vX-n8-lOK" secondAttribute="trailing" constant="20" id="SlK-vK-rUH"/>
                             <constraint firstItem="5wP-Jc-CkD" firstAttribute="bottom" secondItem="EEF-du-q7L" secondAttribute="bottom" constant="-34" id="TeO-km-wdF"/>
                             <constraint firstItem="EEF-du-q7L" firstAttribute="trailing" secondItem="5wP-Jc-CkD" secondAttribute="trailing" id="ffV-Gh-rco"/>
                             <constraint firstItem="EEF-du-q7L" firstAttribute="leading" secondItem="5wP-Jc-CkD" secondAttribute="leading" id="q0J-fh-o2J"/>
@@ -74,6 +84,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kQR-X2-beO"/>
                     <connections>
+                        <outlet property="addButton" destination="4vX-n8-lOK" id="dv9-mm-VdI"/>
                         <outlet property="tableView" destination="EEF-du-q7L" id="jGE-f3-Bdn"/>
                     </connections>
                 </viewController>
@@ -101,6 +112,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addButton" width="48" height="48"/>
         <namedColor name="Accent">
             <color red="0.1479848325" green="0.19969028229999999" blue="0.22376433009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
